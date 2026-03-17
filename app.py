@@ -46,7 +46,7 @@ TEMPLATES_DIR = Path(__file__).parent / "templates"
 # ──────────────────────────────────────────────
 # Rate Limiting (protects your OpenAI bill)
 # ──────────────────────────────────────────────
-DAILY_LIMIT = int(os.environ.get("DAILY_QUERY_LIMIT", "10"))
+DAILY_LIMIT = int(os.environ.get("DAILY_QUERY_LIMIT", "50"))
 _usage: dict[str, list[float]] = defaultdict(list)
 
 
