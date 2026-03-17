@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Savings Account Analysis</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --accent: #2f855a;
+            --accent-hover: #276749;
+            --bg: #f7fafc;
+            --card: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --red: #c53030;
+            --yellow: #d69e2e;
+            --green: #38a169;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white; padding: 1.25rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .header h1 { font-size: 1.3rem; font-weight: 600; }
+        .header-right { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; opacity: 0.9; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; }
+        .status-dot.degraded { background: var(--yellow); }
+
+        /* Portfolio Banner */
+        .banner {
+            background: linear-gradient(90deg, #2d3748, #4a5568);
+            color: white; padding: 0.6rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.8rem;
+        }
+        .banner-left { display: flex; align-items: center; gap: 0.5rem; }
+        .banner-tag {
+            background: var(--accent); padding: 0.15rem 0.5rem; border-radius: 4px;
+            font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+        }
+        .banner a { color: #90cdf4; text-decoration: none; }
+        .banner a:hover { text-decoration: underline; }
+        .queries-left { color: #cbd5e0; font-size: 0.75rem; }
+        .queries-left strong { color: #90cdf4; }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 1.25rem; }
+
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem; }
+        .stat { background: var(--card); border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 1rem; text-align: center; }
+        .stat-val { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+        .stat-val.highlight { color: var(--green); }
+        .stat-lbl { font-size: 0.75rem; color: var(--text-light); margin-top: 0.15rem; }
+
+        /* Chat */
+        .chat { background: var(--card); border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 1.25rem; margin-bottom: 1.25rem; }
+        .chat h2 { font-size: 1rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .chat-row { display: flex; gap: 0.6rem; }
+        .chat-input {
+            flex: 1; padding: 0.7rem 1rem; border: 2px solid var(--border); border-radius: 8px;
+            font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+        }
+        .chat-input:focus { border-color: var(--primary-light); }
+        .btn { padding: 0.7rem 1.25rem; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+        .btn-go { background: var(--accent); color: white; }
+        .btn-go:hover { background: var(--accent-hover); }
+        .btn-go:disabled { background: var(--text-light); cursor: not-allowed; }
+
+        .quick-q { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+        .qq {
+            padding: 0.3rem 0.7rem; background: #edf2f7; border: 1px solid var(--border);
+            border-radius: 16px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; color: var(--text);
+        }
+        .qq:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .resp { margin-top: 1rem; display: none; }
+        .resp.show { display: block; }
+        .resp-box {
+            background: #f7fafc; border: 1px solid var(--border); border-radius: 8px;
+            padding: 1.25rem; white-space: pre-wrap; font-size: 0.85rem; line-height: 1.7;
+            max-height: 500px; overflow-y: auto;
+        }
+        .resp-meta { margin-top: 0.4rem; font-size: 0.7rem; color: var(--text-light); }
+        .loading { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; color: var(--text-light); font-size: 0.85rem; }
+        .spin { width: 18px; height: 18px; border: 2px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: sp 0.7s linear infinite; }
+        @keyframes sp { to { transform: rotate(360deg); } }
+
+        /* Table */
+        .tbl-section { background: var(--card); border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 1.25rem; }
+        .tbl-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+        .tbl-header h2 { font-size: 1rem; color: var(--primary); }
+        .filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .fbtn {
+            padding: 0.3rem 0.65rem; border: 1px solid var(--border); border-radius: 6px;
+            background: white; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;
+        }
+        .fbtn.on { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .tbl-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+        th {
+            text-align: left; padding: 0.55rem 0.65rem; background: #edf2f7;
+            border-bottom: 2px solid var(--border); font-weight: 600; color: var(--primary);
+            cursor: pointer; user-select: none; white-space: nowrap;
+        }
+        th:hover { background: #e2e8f0; }
+        td { padding: 0.55rem 0.65rem; border-bottom: 1px solid var(--border); }
+        tr:hover { background: #f7fafc; }
+        tr.expanded-row { background: #ebf8ff; }
+
+        .rate { font-weight: 600; color: var(--accent); }
+        .rate.top { color: var(--green); font-size: 0.9rem; }
+        .promo-tag {
+            display: inline-block; padding: 0.1rem 0.35rem; background: #fefcbf; color: #975a16;
+            border-radius: 3px; font-size: 0.65rem; font-weight: 500; margin-left: 0.2rem;
+        }
+        .promo-tag.expiring { background: #fed7d7; color: #9b2c2c; }
+        .type-tag { display: inline-block; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.65rem; font-weight: 500; }
+        .type-tag.big5 { background: #ebf4ff; color: #2b6cb0; }
+        .type-tag.digital { background: #f0fff4; color: #276749; }
+        .type-tag.fintech { background: #faf5ff; color: #6b46c1; }
+        .chk { color: var(--green); } .x { color: var(--red); }
+
+        .detail-toggle { cursor: pointer; color: var(--primary-light); font-size: 0.75rem; text-decoration: underline; }
+        .detail-row { display: none; }
+        .detail-row.show { display: table-row; }
+        .detail-cell { padding: 0.75rem 1rem; background: #f7fafc; font-size: 0.8rem; line-height: 1.7; }
+        .detail-cell strong { color: var(--primary); }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: #fffbeb; border: 1px solid #f6e05e; border-radius: 8px;
+            padding: 0.75rem 1.25rem; margin-top: 1.25rem; font-size: 0.75rem;
+            color: #975a16; line-height: 1.6; text-align: center;
+        }
+        .disclaimer strong { color: #744210; }
+
+        @media (max-width: 768px) {
+            .header { flex-direction: column; gap: 0.5rem; text-align: center; }
+            .chat-row { flex-direction: column; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <div class="banner-left">
+        <span class="banner-tag">Portfolio Project</span>
+        <span>AI-powered competitive intelligence tool for Canadian retail banking</span>
+    </div>
+    <div class="queries-left">Queries remaining today: <strong id="qLeft">--</strong></div>
+</div>
+
+<div class="header">
+    <h1>Canadian Savings Account Competitor Analysis</h1>
+    <div class="header-right">
+        <span class="status-dot" id="dot"></span>
+        <span id="statusTxt">Checking...</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="stats">
+        <div class="stat"><div class="stat-val" id="sBank">--</div><div class="stat-lbl">Banks Tracked</div></div>
+        <div class="stat"><div class="stat-val" id="sProd">--</div><div class="stat-lbl">Products</div></div>
+        <div class="stat"><div class="stat-val highlight" id="sHigh">--%</div><div class="stat-lbl">Highest Base Rate</div></div>
+        <div class="stat"><div class="stat-val" id="sHighPromo">--%</div><div class="stat-lbl">Highest Promo Rate</div></div>
+        <div class="stat"><div class="stat-val" id="sAvg">--%</div><div class="stat-lbl">Average Base Rate</div></div>
+        <div class="stat"><div class="stat-val" id="sDate">--</div><div class="stat-lbl">Data As Of</div></div>
+    </div>
+
+    <div class="chat">
+        <h2>Ask the Analysis Agent</h2>
+        <div class="chat-row">
+            <input class="chat-input" id="qIn" placeholder="e.g., Compare Neo Financial vs EQ Bank for a $50,000 deposit..."
+                   onkeypress="if(event.key==='Enter')ask()">
+            <button class="btn btn-go" id="goBtn" onclick="ask()">Analyze</button>
+        </div>
+        <div class="quick-q">
+            <span class="qq" onclick="q('Which bank has the highest base savings rate that is NOT a promotional offer?')">Best non-promo rate</span>
+            <span class="qq" onclick="q('Compare all Big 5 banks - which offers the best savings product?')">Big 5 showdown</span>
+            <span class="qq" onclick="q('Compare Neo Savings 3% vs EQ Bank Notice Savings 30-Day 2.75% — which is better and why?')">Neo vs EQ Bank</span>
+            <span class="qq" onclick="q('Which promotional rates are expiring soon and should I flag them?')">Expiring promos</span>
+            <span class="qq" onclick="q('I have $100,000 to park for 6 months. Which account gives the best return?')">$100K for 6 months</span>
+            <span class="qq" onclick="q('Rank all products by base rate from highest to lowest')">Full ranking</span>
+            <span class="qq" onclick="q('Which accounts offer free e-Transfers AND joint accounts AND no fees?')">Best features combo</span>
+            <span class="qq" onclick="q('Compare Wealthsimple tiers vs EQ Bank — realistic rates for an average Canadian')">Real rates comparison</span>
+        </div>
+        <div class="resp" id="respArea">
+            <div class="loading" id="loader" style="display:none"><div class="spin"></div>Agent is analyzing...</div>
+            <div class="resp-box" id="respBox"></div>
+            <div class="resp-meta" id="respMeta"></div>
+        </div>
+    </div>
+
+    <div class="tbl-section">
+        <div class="tbl-header">
+            <h2 id="tblTitle">All Savings Products</h2>
+            <div class="filters">
+                <button class="fbtn on" onclick="filt('all',this)">All</button>
+                <button class="fbtn" onclick="filt('Big 5',this)">Big 5</button>
+                <button class="fbtn" onclick="filt('Digital',this)">Digital</button>
+                <button class="fbtn" onclick="filt('Fintech',this)">Fintech</button>
+            </div>
+        </div>
+        <div class="tbl-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="srt('bank_name')">Bank</th>
+                        <th onclick="srt('account_name')">Account</th>
+                        <th onclick="srt('base_rate_num')">Base Rate</th>
+                        <th>Promo Rate</th>
+                        <th>Fee</th>
+                        <th>CDIC</th>
+                        <th>e-Tfr</th>
+                        <th>Joint</th>
+                        <th onclick="srt('bank_type')">Type</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr><td colspan="10" style="text-align:center;padding:2rem;color:var(--text-light)">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> This agent is under active development and may produce inaccurate data. Interest rates, product details, and comparisons are AI-generated and should not be relied upon for financial decisions. Always verify rates directly with the respective bank before taking any action.
+    </div>
+</div>
+
+<script>
+let products = [];
+let filter = 'all';
+let sort = { f: 'base_rate_num', d: true };
+
+async function init() {
+    await health();
+    await loadProducts();
+    await checkRemaining();
+}
+
+async function checkRemaining() {
+    try {
+        const r = await fetch('/api/remaining');
+        const d = await r.json();
+        document.getElementById('qLeft').textContent = d.remaining + ' / ' + d.daily_limit;
+    } catch {}
+}
+
+async function health() {
+    try {
+        const r = await fetch('/api/health');
+        const d = await r.json();
+        document.getElementById('dot').className = d.api_key_configured ? 'status-dot' : 'status-dot degraded';
+        document.getElementById('statusTxt').textContent = d.api_key_configured
+            ? `Online | ${d.products_in_database} products | ${d.banks_tracked} banks`
+            : 'API key not set — agent disabled';
+    } catch { document.getElementById('statusTxt').textContent = 'Backend offline'; }
+}
+
+async function loadProducts() {
+    try {
+        const r = await fetch('/api/products');
+        const d = await r.json();
+        products = d.products;
+        updateStats(d);
+        render();
+    } catch {}
+}
+
+function updateStats(d) {
+    const banks = new Set(d.products.map(p => p.bank_name));
+    document.getElementById('sBank').textContent = banks.size;
+    document.getElementById('sProd').textContent = d.count;
+    document.getElementById('tblTitle').textContent = `All Savings Products (${d.count})`;
+
+    const baseRates = d.products.map(p => p.base_rate_num);
+    document.getElementById('sHigh').textContent = Math.max(...baseRates).toFixed(2) + '%';
+    document.getElementById('sAvg').textContent = (baseRates.reduce((a,b)=>a+b,0)/baseRates.length).toFixed(2) + '%';
+    document.getElementById('sDate').textContent = d.metadata.last_full_refresh || '--';
+
+    // Find highest promo rate
+    let maxPromo = 0;
+    d.products.forEach(p => {
+        const promoNum = p.promo_rate_num || 0;
+        if (promoNum > maxPromo) maxPromo = promoNum;
+    });
+    document.getElementById('sHighPromo').textContent = maxPromo > 0 ? maxPromo.toFixed(2) + '%' : 'N/A';
+}
+
+function render() {
+    let f = filter === 'all' ? [...products] : products.filter(p => {
+        if (filter === 'Digital') return p.bank_type.includes('Digital') || p.bank_type.includes('Online');
+        return p.bank_type === filter;
+    });
+
+    f.sort((a,b) => {
+        const av = a[sort.f], bv = b[sort.f];
+        if (typeof av === 'number') return sort.d ? bv - av : av - bv;
+        return sort.d ? String(bv).localeCompare(String(av)) : String(av).localeCompare(String(bv));
+    });
+
+    const topRate = Math.max(...products.map(p => p.base_rate_num));
+    const tb = document.getElementById('tbody');
+
+    tb.innerHTML = f.map((p, i) => {
+        const isTop = p.base_rate_num === topRate;
+        const rCls = isTop ? 'rate top' : 'rate';
+
+        let promoHtml = p.promotional_rate;
+        if (promoHtml && promoHtml !== 'N/A') {
+            // Check if promo is expiring soon
+            let isExpiring = false;
+            if (p.promo_expiry) {
+                const expiryDate = new Date(p.promo_expiry);
+                const now = new Date();
+                const daysLeft = (expiryDate - now) / (1000 * 60 * 60 * 24);
+                isExpiring = daysLeft <= 30;
+            }
+            promoHtml = `<span class="promo-tag ${isExpiring ? 'expiring' : ''}">${p.promotional_rate}</span>`;
+        } else {
+            promoHtml = '<span style="color:var(--text-light)">—</span>';
+        }
+
+        let typeCls = 'big5';
+        if (p.bank_type.includes('Digital') || p.bank_type.includes('Online')) typeCls = 'digital';
+        if (p.bank_type === 'Fintech') typeCls = 'fintech';
+
+        // Build notice period info
+        let noticeInfo = p.notice_period_days ? ` (${p.notice_period_days}-day notice)` : '';
+
+        return `<tr id="row${i}" class="">
+            <td><strong>${p.bank_name}</strong></td>
+            <td>${p.account_name}</td>
+            <td class="${rCls}">${p.base_rate_pct}${noticeInfo}</td>
+            <td>${promoHtml}</td>
+            <td>${p.monthly_fee === '$0' ? 'Free' : p.monthly_fee}</td>
+            <td class="${p.cdic_insured?'chk':'x'}">${p.cdic_insured?'\u2713':'\u2717'}${p.cdic_partner ? '*' : ''}</td>
+            <td class="${p.e_transfer?'chk':'x'}">${p.e_transfer?'\u2713':'\u2717'}</td>
+            <td class="${p.joint_account?'chk':'x'}">${p.joint_account?'\u2713':'\u2717'}</td>
+            <td><span class="type-tag ${typeCls}">${p.bank_type}</span></td>
+            <td><span class="detail-toggle" onclick="toggle(${i})">View</span></td>
+        </tr>
+        <tr class="detail-row" id="detail${i}">
+            <td colspan="10" class="detail-cell">
+                <strong>Rate Tiers:</strong> ${p.rate_tiers}<br>
+                ${p.base_rate_note ? '<strong>Rate Note:</strong> ' + p.base_rate_note + '<br>' : ''}
+                <strong>Promo Details:</strong> ${p.promo_details || 'N/A'}<br>
+                <strong>Promo Duration:</strong> ${p.promo_duration || 'N/A'}${p.promo_expiry ? ' (Expires: ' + p.promo_expiry + ')' : ''}<br>
+                <strong>e-Transfer:</strong> ${p.e_transfer_details || (p.e_transfer ? 'Yes' : 'No')}<br>
+                <strong>Joint Account:</strong> ${p.joint_account ? 'Yes' : 'No'}${p.joint_account_details ? ' — ' + p.joint_account_details : ''}<br>
+                ${p.cdic_partner ? '<strong>CDIC:</strong> Via ' + p.cdic_partner + '<br>' : ''}
+                ${p.notice_period_days ? '<strong>Notice Period:</strong> ' + p.notice_period_days + ' days required for withdrawal<br>' : ''}
+                <strong>Key Features:</strong> ${p.key_features}<br>
+                <strong>Recent Changes:</strong> ${p.new_features || 'None'}<br>
+                <strong>Source:</strong> ${p.source} | <strong>Updated:</strong> ${p.last_updated}
+                ${p.verification ? ' | <strong>Status:</strong> ' + p.verification : ''}
+            </td>
+        </tr>`;
+    }).join('');
+}
+
+function toggle(i) {
+    const det = document.getElementById('detail' + i);
+    const row = document.getElementById('row' + i);
+    det.classList.toggle('show');
+    row.classList.toggle('expanded-row');
+}
+
+function filt(type, btn) {
+    filter = type;
+    document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    render();
+}
+
+function srt(field) {
+    if (sort.f === field) sort.d = !sort.d;
+    else sort = { f: field, d: field === 'base_rate_num' };
+    render();
+}
+
+function q(text) { document.getElementById('qIn').value = text; ask(); }
+
+async function ask() {
+    const query = document.getElementById('qIn').value.trim();
+    if (!query) return;
+
+    const btn = document.getElementById('goBtn');
+    const area = document.getElementById('respArea');
+    const loader = document.getElementById('loader');
+    const box = document.getElementById('respBox');
+    const meta = document.getElementById('respMeta');
+
+    btn.disabled = true;
+    area.classList.add('show');
+    loader.style.display = 'flex';
+    box.style.display = 'none';
+    meta.textContent = '';
+
+    try {
+        const r = await fetch('/api/compare', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query }),
+        });
+        if (!r.ok) { const e = await r.json(); throw new Error(e.detail || 'Failed'); }
+        const d = await r.json();
+
+        box.textContent = d.response;
+        box.style.display = 'block';
+        box.style.color = '';
+
+        const banks = d.banks_referenced.length ? `Banks: ${d.banks_referenced.join(', ')}` : '';
+        const prods = d.products_referenced.length ? ` | Products: ${d.products_referenced.length}` : '';
+        meta.textContent = `${banks}${prods} | ${new Date(d.timestamp).toLocaleTimeString()}`;
+    } catch (e) {
+        box.textContent = `Error: ${e.message}`;
+        box.style.display = 'block';
+        box.style.color = 'var(--red)';
+    } finally {
+        loader.style.display = 'none';
+        btn.disabled = false;
+        checkRemaining();
+    }
+}
+
+init();
+</script>
+</body>
+</html>
