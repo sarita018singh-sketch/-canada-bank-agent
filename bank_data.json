@@ -1,0 +1,2113 @@
+{
+  "metadata": {
+    "title": "Canadian Retail Banking - Savings Products Data",
+    "date_generated": "2026-03-18",
+    "total_banks": 10,
+    "total_products": 30,
+    "disclaimer": "Data collected via web research on March 18, 2026. Rates are subject to change without notice. This is not financial advice. Always verify rates directly with the respective bank before making decisions.",
+    "sources": [
+      "NerdWallet Canada",
+      "Ratehub.ca",
+      "Finder.com",
+      "MoneySense",
+      "highinterestsavings.ca",
+      "Milesopedia",
+      "Bank official websites",
+      "RedFlagDeals forums"
+    ],
+    "bank_of_canada_rate": {
+      "rate_pct": 2.25,
+      "last_decision_date": "2026-03-18",
+      "direction": "hold",
+      "next_decision_date": "2026-04-16",
+      "notes": "Held at 2.25% amid economic uncertainty. Unemployment rose to 6.7%."
+    },
+    "expiry_alerts": [
+      {
+        "bank": "Tangerine",
+        "account": "Tangerine Savings Account",
+        "promo_rate_pct": 4.5,
+        "promo_expiry": "2026-03-16",
+        "alert": "EXPIRED - new client signup window closed March 16. Existing enrolled clients still receive promo for 153 days from enrollment."
+      },
+      {
+        "bank": "Tangerine",
+        "account": "Tangerine TFSA",
+        "promo_rate_pct": 4.6,
+        "promo_expiry": "2026-03-16",
+        "alert": "EXPIRED - new client signup window closed March 16. Existing enrolled clients still receive promo for 153 days from enrollment."
+      },
+      {
+        "bank": "Simplii Financial",
+        "account": "Simplii HISA",
+        "promo_rate_pct": 4.5,
+        "promo_expiry": "2026-04-30",
+        "alert": "New client signup window ends April 30, 2026. Promo rate lasts 153 days from enrollment."
+      },
+      {
+        "bank": "RBC",
+        "account": "RBC High Interest eSavings",
+        "promo_rate_pct": 4.6,
+        "promo_expiry": "2026-06-09",
+        "alert": "New client promo. Enrollment open until June 9, 2026. Rate lasts 3 months from account opening."
+      },
+      {
+        "bank": "BMO",
+        "account": "BMO Savings Amplifier",
+        "promo_rate_pct": 4.5,
+        "promo_expiry": "2026-06-01",
+        "alert": "Requires opening eligible BMO chequing account. Promo lasts 120 days from account opening."
+      }
+    ]
+  },
+  "banks": [
+    {
+      "bank_name": "RBC",
+      "full_name": "Royal Bank of Canada",
+      "bank_type": "Big 5",
+      "accounts": [
+        {
+          "account_name": "RBC High Interest eSavings",
+          "base_rate_pct": 0.55,
+          "base_rate_note": "Posted base rate for existing clients",
+          "promo_rate_pct": 4.6,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 90,
+          "promo_expiry": "2026-06-09",
+          "promo_details": "4.60% promotional rate for new clients for 3 months (until June 9, 2026)",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Via linked RBC chequing account",
+          "joint_account": true,
+          "joint_account_notes": "Standard RBC joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transfers to other RBC accounts. ATM withdrawals: $5 per debit transaction.",
+          "features": [
+            "Online-only account",
+            "Daily interest calculation",
+            "Monthly interest payments",
+            "No minimum balance requirement"
+          ],
+          "new_features": [
+            "Promotional 4.60% rate extended (expires June 2026)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "RBC official website via NerdWallet Canada",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "RBC official website",
+            "cross_references": [
+              "NerdWallet Canada",
+              "Ratehub.ca",
+              "Finder.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "RBC Day to Day Savings",
+          "base_rate_pct": 0.02,
+          "base_rate_note": "Tiered rate: 0.02% on balances <$3K and $3K+",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Via linked RBC chequing account",
+          "joint_account": true,
+          "joint_account_notes": "Standard RBC joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": 3000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Standard",
+              "rate_pct": 0.02,
+              "rate_max_pct": 0.02,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Balance under $3,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 3000,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Standard",
+              "rate_pct": 0.02,
+              "rate_max_pct": 0.02,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Balance $3,000 and above",
+              "max_balance_for_bonus": null,
+              "note": null
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "2 free transactions per month. Additional transactions: $2 each.",
+          "features": [
+            "Tiered interest rate structure",
+            "Daily interest calculation",
+            "Monthly interest payments"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "RBC official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "RBC official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "RBC Enhanced Savings",
+          "base_rate_pct": 0.05,
+          "base_rate_note": "Tiered structure: $5K-$25K base tier shown; higher rates at $25K+ and $100K+",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 5000,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": false,
+          "e_transfer_notes": "Not standard feature for this product",
+          "joint_account": true,
+          "joint_account_notes": "Standard RBC joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 5000,
+              "max_balance": 25000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 1",
+              "rate_pct": 0.05,
+              "rate_max_pct": 0.05,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$5,000 - $25,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 25000,
+              "max_balance": 100000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 2",
+              "rate_pct": 0.1,
+              "rate_max_pct": 0.1,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$25,000 - $100,000",
+              "max_balance_for_bonus": null,
+              "note": "Higher tier rate (estimated)"
+            },
+            {
+              "min_balance": 100000,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 3",
+              "rate_pct": 0.15,
+              "rate_max_pct": 0.15,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$100,000+",
+              "max_balance_for_bonus": null,
+              "note": "Premium tier rate (estimated)"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Limited transaction access. Fee per transaction.",
+          "features": [
+            "Tiered rate structure based on balance",
+            "Premium rates for high balances",
+            "Daily interest calculation"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "RBC official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "RBC official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "Finder.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "TD",
+      "full_name": "Toronto-Dominion Bank",
+      "bank_type": "Big 5",
+      "accounts": [
+        {
+          "account_name": "TD Every Day Savings",
+          "base_rate_pct": 0.01,
+          "base_rate_note": "Minimal posted rate",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported via linked TD chequing",
+          "joint_account": true,
+          "joint_account_notes": "Standard TD joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free transfers between TD accounts. Non-TD transfers: $2 per transaction.",
+          "features": [
+            "No minimum balance",
+            "Daily interest calculation",
+            "Monthly interest payments"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "TD official website via NerdWallet Canada",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "TD official website",
+            "cross_references": [
+              "NerdWallet Canada",
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "TD ePremium Savings",
+          "base_rate_pct": 0.45,
+          "base_rate_note": "Rate applies only to balances $10,000+. Below $10K earns 0%",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 10000,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard TD joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": 10000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Below minimum",
+              "rate_pct": 0,
+              "rate_max_pct": 0,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Balance below $10,000",
+              "max_balance_for_bonus": null,
+              "note": "No interest earned"
+            },
+            {
+              "min_balance": 10000,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Premium",
+              "rate_pct": 0.45,
+              "rate_max_pct": 0.45,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$10,000 and above",
+              "max_balance_for_bonus": null,
+              "note": null
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "$5 per transaction.",
+          "features": [
+            "Online-only account",
+            "Tiered structure with $10K minimum for premium rate",
+            "Daily interest calculation"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "TD official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "TD official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "TD Growth Savings",
+          "base_rate_pct": 1.5,
+          "base_rate_note": "Highest tiered base rate at $500K+. Boosted rates apply with eligible chequing + 2 of 3 qualifying transactions",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard TD joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 5000,
+              "max_balance": 10000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 1",
+              "rate_pct": 0.4,
+              "rate_max_pct": 0.4,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$5,000 - $10,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 10000,
+              "max_balance": 25000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 2",
+              "rate_pct": 0.5,
+              "rate_max_pct": 0.5,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$10,000 - $25,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 25000,
+              "max_balance": 100000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 3",
+              "rate_pct": 0.75,
+              "rate_max_pct": 0.75,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$25,000 - $100,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 100000,
+              "max_balance": 500000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 4",
+              "rate_pct": 1.0,
+              "rate_max_pct": 1.0,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$100,000 - $500,000",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 500000,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 5",
+              "rate_pct": 1.5,
+              "rate_max_pct": 1.5,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$500,000+",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Boosted Rate",
+              "rate_pct": 0.5,
+              "rate_max_pct": 1.5,
+              "type": "boost_with_conditions",
+              "bonus_pct": 0.5,
+              "condition": "Eligible TD chequing account + 2 of 3 qualifying transactions",
+              "max_balance_for_bonus": null,
+              "note": "Boost adds 0.50% to base tier rate. Requires qualifying chequing + 2 qualifying transactions"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free transfers between TD accounts. Standard transfer fees apply for external transfers.",
+          "features": [
+            "Complex tiered rate structure",
+            "Boosted rates with chequing + qualifying transactions",
+            "Daily interest calculation",
+            "High balance earning tiers"
+          ],
+          "new_features": [
+            "Boosted rate structure with qualifying transaction incentives"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "TD official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "TD official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "BMO",
+      "full_name": "Bank of Montreal",
+      "bank_type": "Big 5",
+      "accounts": [
+        {
+          "account_name": "BMO Savings Amplifier",
+          "base_rate_pct": 0.5,
+          "base_rate_note": "Posted base rate",
+          "promo_rate_pct": 4.5,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 120,
+          "promo_expiry": "2026-06-01",
+          "promo_details": "4.50% promotional rate for 120 days (until June 1, 2026) for new clients with eligible chequing account",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard BMO joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transfers. Counter withdrawals: $5 per transaction.",
+          "features": [
+            "Promotion requires eligible BMO chequing account",
+            "Daily interest calculation",
+            "Monthly interest payments"
+          ],
+          "new_features": [
+            "4.50% promotional rate (expires June 1, 2026)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "BMO official website via NerdWallet Canada",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "BMO official website",
+            "cross_references": [
+              "NerdWallet Canada",
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "BMO Savings Builder",
+          "base_rate_pct": 0.25,
+          "base_rate_note": "Base rate increases up to 0.60% with $200+ monthly deposits",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard BMO joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Base",
+              "rate_pct": 0.25,
+              "rate_max_pct": 0.25,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Standard rate",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Enhanced",
+              "rate_pct": 0.6,
+              "rate_max_pct": 0.6,
+              "type": "deposit_bonus",
+              "bonus_pct": 0.35,
+              "condition": "$200+ deposited per month",
+              "max_balance_for_bonus": null,
+              "note": "Bonus rate of 0.60% (0.25% base + 0.35% bonus)"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "1 free withdrawal per month. Additional withdrawals: $5 each.",
+          "features": [
+            "Deposit incentive program",
+            "Rate increases with monthly deposits",
+            "Daily interest calculation"
+          ],
+          "new_features": [
+            "Savings Builder incentive structure"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "BMO official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "BMO official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "Finder.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "BMO Premium Rate Savings",
+          "base_rate_pct": 0.01,
+          "base_rate_note": "Minimal posted rate",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard BMO joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free withdrawals.",
+          "features": [
+            "No transaction limits",
+            "Daily interest calculation",
+            "Monthly interest payments"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "BMO official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "BMO official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "Scotiabank",
+      "full_name": "The Bank of Nova Scotia",
+      "bank_type": "Big 5",
+      "accounts": [
+        {
+          "account_name": "Scotiabank MomentumPLUS Savings",
+          "base_rate_pct": 0.4,
+          "base_rate_note": "Base rate for standard tier. Promotional period has higher rate.",
+          "promo_rate_pct": 4.65,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 90,
+          "promo_expiry": null,
+          "promo_details": "4.65% promotional rate for 90-day premium period (4.70% Preferred tier, 4.75% Ultimate tier). Interest forfeited if withdrawn during premium period.",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard Scotiabank joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Standard",
+              "rate_pct": 0.4,
+              "rate_max_pct": 0.4,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Outside premium period",
+              "max_balance_for_bonus": null,
+              "note": "Standard base rate"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Standard",
+              "rate_pct": 4.65,
+              "rate_max_pct": 4.65,
+              "type": "promo",
+              "bonus_pct": 0,
+              "condition": "90-day premium period",
+              "max_balance_for_bonus": null,
+              "note": "4.65% standard premium rate"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Preferred",
+              "rate_pct": 4.7,
+              "rate_max_pct": 4.7,
+              "type": "promo",
+              "bonus_pct": 0,
+              "condition": "90-day premium period with Preferred tier",
+              "max_balance_for_bonus": null,
+              "note": "Preferred package rate"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Ultimate",
+              "rate_pct": 4.75,
+              "rate_max_pct": 4.75,
+              "type": "promo",
+              "bonus_pct": 0,
+              "condition": "90-day premium period with Ultimate tier",
+              "max_balance_for_bonus": null,
+              "note": "Ultimate package rate"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Withdrawals during premium period forfeit interest. 1 free non-package withdrawal per month outside premium period. Additional withdrawals: $2 each.",
+          "features": [
+            "Premium period with elevated rates",
+            "Package-based tier options",
+            "Interest forfeiture on early withdrawal during premium",
+            "Daily interest calculation"
+          ],
+          "new_features": [
+            "Premium period promotional rates (90 days)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Scotiabank official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Scotiabank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Scotiabank Money Master Savings",
+          "base_rate_pct": 0.01,
+          "base_rate_note": "Minimal posted rate",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard Scotiabank joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "1 free withdrawal per month. Additional withdrawals: $2 each.",
+          "features": [
+            "No minimum balance",
+            "Daily interest calculation",
+            "Monthly interest payments"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Scotiabank official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Scotiabank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Scotiabank Savings Accelerator",
+          "base_rate_pct": 0.1,
+          "base_rate_note": "0.10% non-registered, 0.25% in registered plans (TFSA/RRSP/RESP/RRIF/RDSP)",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage as Scotiabank is a CDIC member institution. $100K per depositor per insured category.",
+          "e_transfer": true,
+          "e_transfer_notes": "Via linked Scotiabank chequing account. Not directly from Accelerator.",
+          "joint_account": true,
+          "joint_account_notes": "Available for joint accounts. Standard Scotiabank eligibility rules apply.",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "rate_pct": 0.1,
+              "note": "Non-registered"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "rate_pct": 0.25,
+              "note": "Registered (TFSA/RRSP/RESP/RRIF/RDSP)"
+            }
+          ],
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited no-fee self-service transfers (Scotia OnLine, mobile, phone). $5 service charge for in-branch transactions.",
+          "features": [
+            "Available in registered plans (TFSA, RRSP, RESP, RRIF, RDSP)",
+            "Unlimited no-fee self-service transfers",
+            "$5 in-branch transaction fee",
+            "No monthly fee",
+            "No minimum balance"
+          ],
+          "new_features": [
+            "Cash Bonus Bundle Offer available March 3 - July 2, 2026"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Scotiabank via WebSearch/Milesopedia/Finder",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "scotiabank.com",
+            "cross_references": [
+              "Milesopedia",
+              "Finder Canada",
+              "myratecompass.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "CIBC",
+      "full_name": "Canadian Imperial Bank of Commerce",
+      "bank_type": "Big 5",
+      "accounts": [
+        {
+          "account_name": "CIBC eAdvantage Savings",
+          "base_rate_pct": 0.2,
+          "base_rate_note": "Base rate can increase to 0.70% with Smart Interest (save $200+/month)",
+          "promo_rate_pct": 5.25,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 90,
+          "promo_expiry": null,
+          "promo_details": "~5.25% promotional rate for new clients for 90 days",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": true,
+          "e_transfer_notes": "Supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard CIBC joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Base",
+              "rate_pct": 0.2,
+              "rate_max_pct": 0.2,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Standard rate",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 0,
+              "max_balance": 200000,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Smart Interest",
+              "rate_pct": 0.7,
+              "rate_max_pct": 0.7,
+              "type": "smart_interest",
+              "bonus_pct": 0.5,
+              "condition": "Save $200+ per month",
+              "max_balance_for_bonus": 200000,
+              "note": "0.70% with deposits of $200+ monthly (up to $200K)"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transfers. Counter withdrawals: $5 per transaction.",
+          "features": [
+            "Smart Interest incentive for deposits",
+            "New client promotional rate (90 days)",
+            "Daily interest calculation",
+            "Online-only account"
+          ],
+          "new_features": [
+            "5.25% promotional rate (90 days)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "CIBC official website via NerdWallet Canada",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "CIBC official website",
+            "cross_references": [
+              "NerdWallet Canada",
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "CIBC Premium Growth (Youth)",
+          "base_rate_pct": 0.05,
+          "base_rate_note": "Youth account for ages 18 and under",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on youth accounts",
+          "joint_account": false,
+          "joint_account_notes": "Youth accounts are individual only",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Limited transaction access appropriate for youth accounts.",
+          "features": [
+            "Age 18 and under eligibility",
+            "Youth-focused account structure",
+            "Daily interest calculation"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "CIBC official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "CIBC official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "EQ Bank",
+      "full_name": "EQ Bank (Equitable Bank)",
+      "bank_type": "Digital / Online Bank",
+      "accounts": [
+        {
+          "account_name": "EQ Bank Personal Account",
+          "base_rate_pct": 1.0,
+          "base_rate_note": "Base rate increases to 2.75% with $2,000+ monthly direct deposits (1.00% base + 1.75% bonus)",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Equitable Bank",
+          "cdic_notes": "Direct CDIC coverage via Equitable Bank",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard EQ Bank joint account rules apply",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Base",
+              "rate_pct": 1.0,
+              "rate_max_pct": 1.0,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Standard rate",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Enhanced",
+              "rate_pct": 2.75,
+              "rate_max_pct": 2.75,
+              "type": "direct_deposit_bonus",
+              "bonus_pct": 1.75,
+              "condition": "$2,000+ monthly direct deposit",
+              "max_balance_for_bonus": null,
+              "note": "1.75% bonus rate on top of 1.00% base"
+            }
+          ],
+          "direct_deposit_bonus_pct": 1.75,
+          "direct_deposit_condition": "$2,000+ per month",
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transactions and transfers. Functions as hybrid chequing+savings account.",
+          "features": [
+            "Works as chequing + savings combo",
+            "Unlimited free transactions",
+            "Direct deposit bonus incentive",
+            "Daily interest calculation",
+            "Online-only account"
+          ],
+          "new_features": [
+            "Direct deposit bonus structure (1.75% bonus)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "EQ Bank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "EQ Bank Notice Savings (10-day)",
+          "base_rate_pct": 2.35,
+          "base_rate_note": "Posted rate for 10-day notice period",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Equitable Bank",
+          "cdic_notes": "Direct CDIC coverage via Equitable Bank",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on notice accounts. Transfer to Personal account first.",
+          "joint_account": false,
+          "joint_account_notes": "Not available on notice savings accounts",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": 10,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "10-day withdrawal notice required. No e-Transfers. Withdrawals available after notice period.",
+          "features": [
+            "Higher rate due to notice period",
+            "10-day withdrawal notice required",
+            "Daily interest calculation",
+            "No joint account option"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "EQ Bank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "Finder.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "EQ Bank Notice Savings (30-day)",
+          "base_rate_pct": 2.75,
+          "base_rate_note": "Posted rate for 30-day notice period",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Equitable Bank",
+          "cdic_notes": "Direct CDIC coverage via Equitable Bank",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on notice accounts. Transfer to Personal account first.",
+          "joint_account": false,
+          "joint_account_notes": "Not available on notice savings accounts",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": 30,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "30-day withdrawal notice required. No e-Transfers. Withdrawals available after notice period.",
+          "features": [
+            "Highest EQ Bank base rate due to 30-day notice",
+            "30-day withdrawal notice required",
+            "Daily interest calculation",
+            "No joint account option"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "EQ Bank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "Finder.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "EQ Bank TFSA Savings",
+          "base_rate_pct": 1.5,
+          "base_rate_note": "Tax-free rate for TFSA account",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Equitable Bank",
+          "cdic_notes": "CDIC coverage applies to eligible deposits within TFSA limits",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on TFSA. Transfer to Personal account first.",
+          "joint_account": false,
+          "joint_account_notes": "TFSA accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Standard TFSA withdrawal rules apply. No e-Transfers.",
+          "features": [
+            "Tax-free growth",
+            "TFSA contribution room tracking",
+            "Daily interest calculation",
+            "CRA individual-only structure"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "EQ Bank official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "EQ Bank RRSP Savings",
+          "base_rate_pct": 1.5,
+          "base_rate_note": "Estimated ~1.50% for RRSP account",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Equitable Bank",
+          "cdic_notes": "CDIC coverage applies to RRSP deposits",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on RRSP. Standard RRSP withdrawal rules apply.",
+          "joint_account": false,
+          "joint_account_notes": "RRSP accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Standard RRSP withdrawal rules apply. Subject to withholding taxes. No e-Transfers.",
+          "features": [
+            "Tax-deferred RRSP growth",
+            "Contribution room tracking",
+            "Daily interest calculation",
+            "CRA individual-only structure"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "EQ Bank official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "Rate not explicitly confirmed on primary source; estimated based on product structure"
+          }
+        },
+        {
+          "account_name": "EQ Bank FHSA Savings",
+          "base_rate_pct": 1.5,
+          "base_rate_note": "Tax-free interest. Not available to Quebec residents.",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": null,
+          "cdic_notes": "Direct CDIC coverage via Equitable Bank. FHSA is a separate eligible deposit category under CDIC.",
+          "e_transfer": false,
+          "e_transfer_notes": "Must transfer to EQ Bank Personal Account first, then e-Transfer from there.",
+          "joint_account": false,
+          "joint_account_notes": "FHSA is individual only by CRA rules. Cannot be held jointly.",
+          "rate_tiers": [],
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Transfers to other EQ Bank accounts are free. Withdrawals are tax-free if used for qualifying first home purchase. Non-qualifying withdrawals are taxable.",
+          "features": [
+            "First Home Savings Account (FHSA)",
+            "Lifetime contribution limit $40,000",
+            "Annual contribution limit $8,000 (unused room carries forward up to $8,000)",
+            "Tax-deductible contributions",
+            "Tax-free qualifying withdrawals for first home",
+            "Can hold for maximum 15 years",
+            "No monthly fees",
+            "Not available to Quebec residents",
+            "Can transfer between RRSP and FHSA"
+          ],
+          "new_features": [
+            "Canada's first fully digital no-fee FHSA Savings Account"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "EQ Bank via WebSearch",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "eqbank.ca",
+            "cross_references": [
+              "Fortunly Canada",
+              "milliondollarjourney.com"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "Tangerine",
+      "full_name": "Tangerine Bank",
+      "bank_type": "Digital / Online Bank",
+      "accounts": [
+        {
+          "account_name": "Tangerine Savings Account",
+          "base_rate_pct": 0.7,
+          "base_rate_note": "Posted base rate",
+          "promo_rate_pct": 4.5,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 153,
+          "promo_expiry": "2026-05-16",
+          "promo_details": "4.50% promotional rate for 5 months (153 days). Available to new clients by March 16, 2026. Up to $1M eligible.",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Tangerine Bank",
+          "cdic_notes": "Direct CDIC coverage via Tangerine Bank (direct member)",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard Tangerine joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free withdrawals and transfers.",
+          "features": [
+            "New client promotional rate (5 months)",
+            "Unlimited free transactions",
+            "Daily interest calculation",
+            "Online-only account"
+          ],
+          "new_features": [
+            "4.50% promotional rate (expires May 16, 2026)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Tangerine official website via NerdWallet Canada",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Tangerine official website",
+            "cross_references": [
+              "NerdWallet Canada",
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Tangerine TFSA",
+          "base_rate_pct": 0.7,
+          "base_rate_note": "Posted base rate for TFSA",
+          "promo_rate_pct": 4.6,
+          "promo_rate_registered_pct": 4.6,
+          "promo_duration_days": 153,
+          "promo_expiry": null,
+          "promo_details": "4.60% promotional rate for 5 months (153 days) for new clients. Slightly higher than regular savings promo.",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Tangerine Bank",
+          "cdic_notes": "Direct CDIC coverage via Tangerine Bank",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": false,
+          "joint_account_notes": "TFSA accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free withdrawals and transfers.",
+          "features": [
+            "Tax-free TFSA growth",
+            "New client promotional rate (5 months, 4.60%)",
+            "Unlimited free transactions",
+            "Daily interest calculation"
+          ],
+          "new_features": [
+            "4.60% promotional rate (expires May 2026)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Tangerine official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Tangerine official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Tangerine RRSP",
+          "base_rate_pct": 0.7,
+          "base_rate_note": "Posted base rate for RRSP",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Tangerine Bank",
+          "cdic_notes": "Direct CDIC coverage via Tangerine Bank",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on RRSP. Standard RRSP withdrawal rules apply.",
+          "joint_account": false,
+          "joint_account_notes": "RRSP accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Standard RRSP withdrawal rules apply. Subject to withholding taxes.",
+          "features": [
+            "Tax-deferred RRSP growth",
+            "Contribution room tracking",
+            "Daily interest calculation",
+            "CRA individual-only structure"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Tangerine official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Tangerine official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "RRSP promo rate likely similar to TFSA but not explicitly verified on primary source"
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "Simplii Financial",
+      "full_name": "Simplii Financial (CIBC subsidiary)",
+      "bank_type": "Digital / Online Bank",
+      "accounts": [
+        {
+          "account_name": "Simplii HISA",
+          "base_rate_pct": 0.4,
+          "base_rate_note": "Estimated base rate. Exact rate not clearly listed on primary source.",
+          "promo_rate_pct": 4.5,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": 153,
+          "promo_expiry": "2026-04-30",
+          "promo_details": "4.50% promotional rate for 153 days (Feb 1 - Apr 30, 2026). Up to $100K eligible.",
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "CIBC",
+          "cdic_notes": "CDIC coverage provided via CIBC",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": true,
+          "joint_account_notes": "Standard Simplii joint account rules apply",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transfers.",
+          "features": [
+            "Promotional rate (expires Apr 30, 2026)",
+            "Unlimited free transactions",
+            "Daily interest calculation",
+            "CIBC-backed institution"
+          ],
+          "new_features": [
+            "4.50% promotional rate (expires April 30, 2026)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Simplii official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Simplii official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "Base rate is estimated as it is not explicitly published on comparison sites"
+          }
+        },
+        {
+          "account_name": "Simplii TFSA",
+          "base_rate_pct": 0.4,
+          "base_rate_note": "Estimated base rate. Exact rate not clearly listed.",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "CIBC",
+          "cdic_notes": "CDIC coverage provided via CIBC",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": false,
+          "joint_account_notes": "TFSA accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free online transfers.",
+          "features": [
+            "Tax-free TFSA growth",
+            "Unlimited free transactions",
+            "Daily interest calculation",
+            "CIBC-backed institution"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Simplii official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Simplii official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "Base rate is estimated and marked as Unverified"
+          }
+        },
+        {
+          "account_name": "Simplii RRSP",
+          "base_rate_pct": 0.4,
+          "base_rate_note": "Estimated base rate. Exact rate not clearly listed.",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "CIBC",
+          "cdic_notes": "CDIC coverage provided via CIBC",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on RRSP. Standard RRSP withdrawal rules apply.",
+          "joint_account": false,
+          "joint_account_notes": "RRSP accounts are individual only under CRA rules",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Standard RRSP withdrawal rules apply. Subject to withholding taxes.",
+          "features": [
+            "Tax-deferred RRSP growth",
+            "Contribution room tracking",
+            "Daily interest calculation",
+            "CIBC-backed institution"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Simplii official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Simplii official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "Base rate is estimated and marked as Unverified"
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "Wealthsimple",
+      "full_name": "Wealthsimple Financial Inc.",
+      "bank_type": "Fintech",
+      "accounts": [
+        {
+          "account_name": "Wealthsimple Cash",
+          "base_rate_pct": 1.25,
+          "base_rate_note": "Core tier base rate. Premium (1.75% at $100K+ assets) and Generation (2.25% at $500K+ assets) also available.",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Multiple partner institutions (up to $1M combined coverage)",
+          "cdic_notes": "CDIC coverage via multiple partner banks, up to $1M combined aggregate",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": false,
+          "joint_account_notes": "Individual accounts only. No joint account option.",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": 100000,
+              "tier": "Core",
+              "rate_pct": 1.25,
+              "rate_max_pct": 1.25,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Standard tier",
+              "max_balance_for_bonus": null,
+              "note": "Core tier for assets under $100K"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 100000,
+              "max_assets": 500000,
+              "tier": "Premium",
+              "rate_pct": 1.75,
+              "rate_max_pct": 1.75,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Premium tier",
+              "max_balance_for_bonus": null,
+              "note": "Premium tier for $100K - $500K assets"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 500000,
+              "max_assets": null,
+              "tier": "Generation",
+              "rate_pct": 2.25,
+              "rate_max_pct": 2.25,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Generation tier",
+              "max_balance_for_bonus": null,
+              "note": "Generation tier for $500K+ assets"
+            },
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Direct Deposit Bonus",
+              "rate_pct": 0.5,
+              "rate_max_pct": 0.5,
+              "type": "direct_deposit_bonus",
+              "bonus_pct": 0.5,
+              "condition": "Set up direct deposit",
+              "max_balance_for_bonus": null,
+              "note": "Additional 0.50% bonus for Core/Premium tiers with direct deposit"
+            }
+          ],
+          "direct_deposit_bonus_pct": 0.5,
+          "direct_deposit_condition": "Direct deposit setup",
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free transactions and transfers.",
+          "features": [
+            "Asset-based tiered rates (Core/Premium/Generation)",
+            "Direct deposit bonus incentive",
+            "Unlimited free transactions",
+            "Fintech-operated account",
+            "Multi-partner CDIC coverage"
+          ],
+          "new_features": [
+            "Direct deposit bonus (0.50%) for qualifying tiers"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Wealthsimple official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Wealthsimple official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Wealthsimple Registered Savings (TFSA/RRSP)",
+          "base_rate_pct": 1.25,
+          "base_rate_note": "Core tier rate for TFSA/RRSP (~1.25%). Exact rates vary by account type.",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Multiple partner institutions",
+          "cdic_notes": "CDIC coverage via multiple partner banks for registered accounts",
+          "e_transfer": false,
+          "e_transfer_notes": "Not available on registered accounts. Standard TFSA/RRSP withdrawal rules apply.",
+          "joint_account": false,
+          "joint_account_notes": "Registered accounts are individual only under CRA rules",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Core",
+              "rate_pct": 1.25,
+              "rate_max_pct": 1.25,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "Standard registered account rate",
+              "max_balance_for_bonus": null,
+              "note": "Core tier applies to TFSA/RRSP accounts"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Standard TFSA/RRSP withdrawal rules apply. No e-Transfers on registered accounts.",
+          "features": [
+            "Tax-advantaged registered accounts (TFSA/RRSP)",
+            "Fintech-operated platform",
+            "Multi-partner CDIC coverage",
+            "Contribution room tracking"
+          ],
+          "new_features": [],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Wealthsimple official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Wealthsimple official website",
+            "cross_references": [
+              "Ratehub.ca"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": "Exact rate for registered accounts not explicitly verified; estimated based on Core tier"
+          }
+        }
+      ]
+    },
+    {
+      "bank_name": "Neo Financial",
+      "full_name": "Neo Financial Inc.",
+      "bank_type": "Fintech",
+      "accounts": [
+        {
+          "account_name": "Neo Savings",
+          "base_rate_pct": 2.9,
+          "base_rate_note": "Highest tiered rate ($20,000+). Tiered structure: $0-$4,999 (2.25%), $5,000-$19,999 (2.50%), $20,000+ (2.90%)",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Peoples Bank of Canada",
+          "cdic_notes": "CDIC coverage via Peoples Bank of Canada. Deposits aggregate with direct Peoples Bank holdings for CDIC limits.",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": true,
+          "joint_account_notes": "Joint accounts available for married/common-law couples only, not for business partners or friends",
+          "rate_tiers": [
+            {
+              "min_balance": 0,
+              "max_balance": 4999,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 1",
+              "rate_pct": 2.25,
+              "rate_max_pct": 2.25,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$0 - $4,999",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 5000,
+              "max_balance": 19999,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 2",
+              "rate_pct": 2.5,
+              "rate_max_pct": 2.5,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$5,000 - $19,999",
+              "max_balance_for_bonus": null,
+              "note": null
+            },
+            {
+              "min_balance": 20000,
+              "max_balance": null,
+              "min_assets": 0,
+              "max_assets": null,
+              "tier": "Tier 3",
+              "rate_pct": 2.9,
+              "rate_max_pct": 2.9,
+              "type": null,
+              "bonus_pct": 0,
+              "condition": "$20,000+",
+              "max_balance_for_bonus": null,
+              "note": "Advertised as 'up to 3%' but actual posted rate is 2.90%"
+            }
+          ],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free withdrawals and transfers.",
+          "features": [
+            "Tiered rate structure",
+            "High competitive rates (up to 2.90%)",
+            "Unlimited free transactions",
+            "Fintech-operated account",
+            "Joint accounts for couples only"
+          ],
+          "new_features": [
+            "Tiered rate structure with no minimum balance"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Neo Financial official website via Ratehub.ca",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Neo Financial official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        },
+        {
+          "account_name": "Neo HISA (Legacy)",
+          "base_rate_pct": 1.25,
+          "base_rate_note": "Current rate after reduction on Dec 9, 2025 from previous 2.25%",
+          "promo_rate_pct": null,
+          "promo_rate_registered_pct": null,
+          "promo_duration_days": null,
+          "promo_expiry": null,
+          "promo_details": null,
+          "min_balance": 0,
+          "monthly_fee": 0,
+          "cdic_insured": true,
+          "cdic_partner": "Peoples Bank of Canada",
+          "cdic_notes": "CDIC coverage via Peoples Bank of Canada. Deposits aggregate with direct Peoples Bank holdings.",
+          "e_transfer": true,
+          "e_transfer_notes": "Unlimited free e-Transfers supported",
+          "joint_account": true,
+          "joint_account_notes": "Joint accounts available for married/common-law couples only",
+          "rate_tiers": [],
+          "direct_deposit_bonus_pct": null,
+          "direct_deposit_condition": null,
+          "notice_period_days": null,
+          "interest_calc": "daily",
+          "interest_paid": "monthly",
+          "debit_transactions": "Unlimited free withdrawals and transfers.",
+          "features": [
+            "Legacy HISA account",
+            "Unlimited free transactions",
+            "Fintech-operated account",
+            "Joint accounts for couples only"
+          ],
+          "new_features": [
+            "Rate reduction from 2.25% to 1.25% (Dec 9, 2025)"
+          ],
+          "last_updated": "2026-03",
+          "source_freshness": {
+            "source_date": "2026-03-18",
+            "source_name": "Neo Financial official website",
+            "is_stale": false
+          },
+          "carried_forward": false,
+          "carried_forward_note": null,
+          "verification": {
+            "primary_source": "Neo Financial official website",
+            "cross_references": [
+              "Ratehub.ca",
+              "NerdWallet Canada"
+            ],
+            "contradiction_found": false,
+            "contradiction_note": null
+          }
+        }
+      ]
+    }
+  ]
+}
